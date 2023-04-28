@@ -1,0 +1,128 @@
+<html>
+<body>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="age">Delivery person Age:</label>
+        <input type="text" id="age" name="age" placeholder="Enter age value (float)">
+    </div>
+
+    <div class="form-group">
+        <label for="ratting">Delivery person Ratings:</label>
+        <input type="text" id="ratting" name="ratting" placeholder="Enter ratting value (float)">
+    </div>
+
+    <div class="form-group">  
+        <label for="Restaurant_latitude">Restaurant latitude:</label>
+        <input type="text" id="Restaurant_latitude" name="Restaurant_latitude" placeholder="Enter Restaurant latitude value (float)">
+    </div>
+
+    <div class="form-group">  
+        <label for="Restaurant_longitude">Restaurant longitude:</label>
+        <input type="text" id="Restaurant_longitude" name="Restaurant_longitude" placeholder="Enter Restaurant longitude value (float)">
+    </div>
+    <div class="form-group">  
+        <label for="Delivery_location_latitude">Delivery location latitude:</label>
+        <input type="text" id="Delivery_location_latitude" name="Delivery_location_latitude" placeholder="Enter Delivery location latitude value (float)">
+    </div>
+    <div class="form-group">  
+        <label for="Delivery_location_longitude">Delivery location longitude:</label>
+        <input type="text" id="Delivery_location_longitude" name="Delivery_location_longitude" placeholder="Enter Delivery location longitude value (float)">
+    </div>
+    <div class="form-group">
+        <label for="weather">Weather:</label>
+        <select id="weather" name="weather">
+          <option value="Fog">Fog</option>
+          <option value="Stormy">Stormy</option>
+          <option value="Sandstorms">Sandstorms</option>
+          <option value="Windy">Windy</option>
+          <option value="Cloudy">Cloudy</option>
+          <option value="Sunny">Sunny</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="traffic">Traffic:</label>
+        <select id="traffic" name="traffic">
+          <option value="Jam">Jam</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="vehicle_condition">Vehicle condition:</label>
+        <select id="vehicle_condition" name="vehicle_condition">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="order_type">Order type:</label>
+        <select id="order_type" name="order_type">
+          <option value="Snack">Snack</option>
+          <option value="Meal">Meal</option>
+          <option value="Drinks">Drinks</option>
+          <option value="Buffet">Buffet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="type_of_vehicle">Type of vehicle:</label>
+        <select id="type_of_vehicle" name="type_of_vehicle">
+          <option value="motorcycle">motorcycle</option>
+          <option value="scooter">scooter</option>
+          <option value="electric_scooter">electric_scooter</option>
+          <option value="bicycle">bicycle</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="multiple_deliver">Multiple deliver:</label>
+        <select id="multiple_deliver" name="multiple_deliver">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+     
+      <div class="form-group">
+        <label for="festival">Festival:</label>
+        <select id="festival" name="festival">
+          <option value="No">No</option>
+          <option value="Yes">Yes</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="city">City:</label>
+        <select id="city" name="city">
+          <option value="Metropolitian">Metropolitian</option>
+          <option value="Urban">Urban</option>
+          <option value="Semi-Urban">Semi-Urban</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="ordered_date">Ordered_date:</label>
+        <select id="ordered_date" name="ordered_date">
+          <option value="4/4/2022">4/4/2022</option>
+          <option value="5/4/2023">5/4/2023</option>
+          <option value="5/7/2023">5/7/2023</option>
+        </select>
+      </div>
+    <!-- <div class="form-group">
+        <label for="ordered_date">Ordered date:</label>
+        <input type="text" id="ordered_date" name="ordered_date" placeholder="Enter value like 12/12/2023">
+    </div>          -->
+    <div class="form-group">
+        <label for="time_orderd">Time orderd:</label>
+        <input type="text" id="time_orderd" name="time_orderd" placeholder="Enter value like 21:12">
+    </div>     
+    <div class="form-group">
+        <label for="time_order_picked">Time order picked:</label>
+        <input type="text" id="time_order_picked" name="time_order_picked" placeholder="Enter value like 21:12">
+    </div>         
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

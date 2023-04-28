@@ -21,9 +21,9 @@ class DataIngestion:
 
     def initial_data_ingestion(self):
         logging.info('Data Ingestion methods Starts')
-
         try:
-            df = pd.read_csv(os.path.join('notebooks/data', 'gemstone.csv'))
+            current_folder = os.path.abspath('.')
+            df=pd.read_csv(os.path.join(current_folder, 'notebooks','data','clean_data.csv'))
             logging.info('Dataset read as pandas Dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.row_data_path), exist_ok=True)
@@ -31,7 +31,7 @@ class DataIngestion:
             logging.info("Train test split")
             train_set, test_set= train_test_split(df, test_size=0.30, random_state=42)
             train_set.to_csv(self.ingestion_config.train_data_path,index=False, header=True)
-            test_set.to_csv(self.ingestion_config.train_data_path, index=False, header=True)
+            test_set.to_csv(self.ingestion_config.test_data_path, index=False, header=True)
 
             logging.info('Ingestion of Data is completed')
 
